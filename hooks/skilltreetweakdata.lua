@@ -412,8 +412,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 		name_id = "menu_player_health_beta",
 		desc_id = "menu_player_health_desc",
 		icon_xy = {
-			1,
-			3
+			11,
+			11
 		}
 	}
     self.skills.fire_rate = {
