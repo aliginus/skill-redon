@@ -71,8 +71,26 @@ self.values.assault_rifle.damage_multiplier = {-0.05,-1.12}
 self.values.smg.damage_multiplier = {-0.05,-0.12}
 self.values.smg.recoil_multiplier = {0.75}
 self.values.smg.fire_rate_multiplier = {1.35}
-
+self.values.snp.consume_no_ammo_chance = {0.1,0.3}
 ----------------------------------------
+self.definitions.snp_consume_no_ammo_chance_1 = {
+		name_id = "menu_shotgun_consume_no_ammo_chance",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "consume_no_ammo_chance",
+			category = "snp"
+		}
+	}
+	self.definitions.snp_consume_no_ammo_chance_2 = {
+		name_id = "menu_shotgun_consume_no_ammo_chance",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "consume_no_ammo_chance",
+			category = "snp"
+		}
+	}		
 self.definitions.player_passive_health_regen_2 = {
 		name_id = "menu_player_passive_health_regen",
 		category = "temporary",
