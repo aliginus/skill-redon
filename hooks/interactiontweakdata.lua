@@ -4,7 +4,7 @@ self.gage_assignment = {
 		icon = "develop",
 		text_id = "debug_interact_gage_assignment_take",
 		start_active = true,
-		timer = 1,
+		timer = 0,
 		action_text_id = "hud_action_taking_gage_assignment",
 		blocked_hint = "hint_gage_mods_dlc_block",
         requires_mask_off_upgrade = {
@@ -62,6 +62,51 @@ self.drill = {
 			category = "player"
 		}
 	}
+	self.invisible_interaction_open = {
+		icon = "develop",
+		text_id = "hud_int_invisible_interaction_open",
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.open_from_inside = {
+		text_id = "hud_int_invisible_interaction_open",
+		start_active = true,
+		interact_distance = 100,
+		axis = "x",
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.push_button = {
+		text_id = "hud_int_push_button",
+		axis = "z",
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.hold_push_button = {
+		text_id = "hud_int_push_button",
+		action_text_id = "hud_action_pushing_button",
+		axis = "z",
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.open_trunk = {
+		icon = "develop",
+		text_id = "debug_interact_open_trunk",
+		axis = "x",
+		action_text_id = "hud_action_opening_trunk",
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
 	self.open_door = {
 		icon = "interaction_open_door",
 		text_id = "debug_interact_open_door",
@@ -71,17 +116,143 @@ self.drill = {
 			category = "player"
 		}
 	}
-	self.hold_open_door_no_axis = {
-		text_id = "hud_int_invisible_interaction_open",
-		action_text_id = "hud_action_opening",
-		start_active = false,
-		interact_distance = 200,
-		timer = 1,
+	self.take_keys = {
+		text_id = "hud_int_take_keys",
 		requires_mask_off_upgrade = {
 			upgrade = "mask_off_pickup",
 			category = "player"
 		}
 	}
+	self.timelock_panel = {
+		icon = "equipment_bank_manager_key",
+		text_id = "hud_int_timelock_panel",
+		equipment_text_id = "hud_int_equipment_no_keycard",
+		special_equipment = "bank_manager_key",
+		equipment_consume = true,
+		start_active = false,
+		axis = "y",
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.mex_red_door = {
+		icon = "equipment_bank_manager_key",
+		text_id = "hud_cas_open_door",
+		equipment_text_id = "hud_action_try_keys_no_key",
+		special_equipment = "keychain",
+		sound_start = "bar_unlock_grate_door",
+		sound_interupt = "bar_unlock_grate_door_cancel",
+		sound_done = "bar_unlock_grate_door_finished",
+		equipment_consume = true,
+		interact_distance = 150,
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.bex_take_record_tape = {
+		text_id = "hud_int_take_record_tape",
+		action_text_id = "hud_action_take_record_tape",
+		interact_distance = 200,
+		start_active = true,
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	
+	self.red_open_shutters = {
+		text_id = "hud_int_hold_open_shutters",
+		axis = "y",
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.red_close_shutters = {
+		text_id = "hud_int_hold_close_shutters",
+		axis = "y",
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.cas_button_01.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_02.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_03.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_04.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_05.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_06.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_07.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_08.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_09.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_0.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_clear.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_enter.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.cas_button_0.interact_distance = 80
+	self.cas_button_clear.interact_distance = 80
+	self.cas_button_enter.interact_distance = 80
+	self.circuit_breaker.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.circuit_breaker_off.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.numpad.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.access_camera.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.access_camera_x_axis.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	self.access_camera_y_axis.requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		} 
 ------------------------------
 self.ammo_bag = {
 		icon = "equipment_ammo_bag",
@@ -93,16 +264,17 @@ self.ammo_bag = {
 		sound_interupt = "bar_bag_generic_cancel",
 		sound_done = "bar_bag_generic_finished",
 		action_text_id = "hud_action_taking_ammo",
-		upgrade_timer_multiplier = {
-			upgrade = "deploy_interact_faster",
-			category = "player"
-		},
-		{   
-			upgrade = "interaction_speed_multiplier",
-			category = "ammo_bag"
+		upgrade_timer_multipliers = {
+			{
+				upgrade = "interaction_speed_multiplier",
+				category = "ammo_bag"
+			},
+			{
+				upgrade = "deploy_interact_faster",
+				category = "player"
+			}
 		}
 	}
-
 
 
 

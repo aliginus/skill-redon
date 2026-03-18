@@ -7,7 +7,7 @@
     <hook file="playermanager.lua"	 source_file="lib/managers/playermanager"/>
     <hook file="blackmarketmanager.lua" source_file="lib/managers/blackmarketmanager"/>
     <hook file="interactiontweakdata.lua" source_file="lib/tweak_data/interactiontweakdata"/>
-    <hook file="playertweakdata.lua" source_file="lib/tweak_data/playertweakdata"/>  
+    <hook file="playertweakdata.lua" source_file="lib/tweak_data/playertweakdata"/>
    </Hooks>
 
     <AddFiles directory="assets/">

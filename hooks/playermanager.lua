@@ -51,5 +51,3 @@ function PlayerManager:skill_dodge_chance(running, crouching, on_zipline, overri
 
 	return chance
 end
-
- 

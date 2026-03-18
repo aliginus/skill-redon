@@ -73,7 +73,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"control_freak"
 				},
 				{
-					"black_marketeer"
+					"black_marketeer",
+					"health_regen"
 				}
 			}
 		},
@@ -140,7 +141,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"close_by"
 				},
 				{
-					"overkill"
+					"overkill",
+					"shotgun_to_damage"
 				}
 			}
 		},
@@ -205,10 +207,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 				},
 				{
 					"engineering",
-					"jack_of_all_trades"
+					"smg_master"
 				},
 				{
-					"tower_defense"
+					"tower_defense","jack_of_all_trades"
 				}
 			}
 		},
@@ -337,11 +339,11 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 				},
 				{
 					"dance_instructor",
-					"akimbo"
+					"expert_handling"
 				},
 				{
 					"gun_fighter",
-					"expert_handling"
+					"akimbo"
 				},
 				{
 					"trigger_happy",
@@ -618,9 +620,67 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 			12
 		}
 	}
+self.skills.shotgun_to_damage = {
+		{
+			upgrades = {
+				"shotgun_damage_multiplier_1","assault_rifle_damage_multiplier_1","smg_damage_multiplier_1"
+			},
+			cost = self.costs.default
+		},
+		{
+			upgrades = {
+				"shotgun_damage_multiplier_2","assault_rifle_damage_multiplier_2","smg_damage_multiplier_2"
+			},
+			cost = self.costs.pro
+		},
+		name_id = "menu_shotgun_dmg_beta",
+		desc_id = "menu_shotgun_dmg_desc",
+		icon_xy = {
+			11,
+			12
+		}
+	}
+self.skills.smg_master = {
+		{
+			upgrades = {
+				"smg_recoil_multiplier"
+			},
+			cost = self.costs.default
+		},
+		{
+			upgrades = {
+				"smg_fire_rate_multiplier"
+			},
+			cost = self.costs.pro
+		},
+		name_id = "menu_smg_master_beta",
+		desc_id = "menu_smg_master_beta_desc",
+		icon_xy = {
+			3,
+			3
+		}
+	}
 
-
-
+self.skills.health_regen  = {
+		{
+			upgrades = {
+				"player_passive_health_regen_2"
+			},
+			cost = self.costs.default
+		},
+		{
+			upgrades = {
+				"player_passive_health_regen_3"
+			},
+			cost = self.costs.pro
+		},
+		name_id = "menu_health_regen_beta",
+		desc_id = "menu_health_regen_desc",
+		icon_xy = {
+			11,
+			27
+		}
+	}
 
 
 
@@ -652,7 +712,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
     self.skills.bandoliers[1].upgrades = {"extra_ammo_multiplier1","passive_ammo_bag_interaction_speed_multiplier"}
     self.skills.pack_mule[2].upgrades = {	"player_armor_carry_bonus_1","carry_throw_distance_multiplier_2"}
 
-	 
+	self.skills.optic_illusions[1].upgrades = {"player_camouflage_multiplier","player_camouflage_bonus_1","player_camouflage_bonus_2"}
 -----------------ПЕРКИ
 
 
@@ -668,6 +728,7 @@ self.specializations[11][7].upgrades = {"player_damage_to_hot_4","passive_health
 self.specializations[13][3].upgrades = {"player_armor_health_store_amount_2","passive_health_addend_1"}
 self.specializations[13][7].upgrades = {"player_armor_health_store_amount_3","passive_health_addend_3"}
 self.specializations[13][5].upgrades = {"player_armor_max_health_store_multiplier","player_passive_dodge_chance_1","passive_health_addend_2"}
+self.specializations[15][1].upgrades = { "player_passive_always_regen_armor_1","temporary_armor_break_invulnerable_1"}
 self.specializations[17][3].upgrades = {"passive_health_addend_1"}
 self.specializations[17][7].upgrades = {"passive_health_addend_3","player_chico_injector_low_health_multiplier"}
 self.specializations[17][9].upgrades = {"player_passive_loot_drop_multiplier","passive_health_addend_4","player_chico_injector_health_to_speed"}
@@ -679,7 +740,7 @@ self.specializations[22][3].upgrades = {"player_copr_out_of_health_move_slow_1",
 self.specializations[22][7].upgrades = {"passive_health_addend_3"}
 self.specializations[22][9].upgrades = { "player_activate_ability_downed","player_copr_static_damage_ratio_2","player_passive_loot_drop_multiplier","passive_health_addend_4","player_copr_kill_life_leech_2"}
 self.specializations[5][3].upgrades = {"player_perk_armor_regen_timer_multiplier_2","akimbo_extra_ammo_multiplier_2"}
-
+self.specializations[4][3].upgrades = {"player_crouch_dodge_chance_2"}
 
 
 

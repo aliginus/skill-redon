@@ -14,10 +14,12 @@ self.skill_descs.speedy_reload.multibasic = "35%"
 self.skill_descs.awareness.multibasic = "25%"
 self.skill_descs.overkill.multibasic2 = "8"
 self.skill_descs.bandoliers.multibasic = "75%"
+self.specialization_descs[15][9].multiperk = "30"
+self.skill_descs.optic_illusions.multibasic = "50%"
 ---Навык берсерк
 self.player_damage_health_ratio_threshold = 0.99
-
-
+---Навык
+self.sharpshooter_categories = {"assault_rifle","smg","shotgun","pistol"}
 ---------Улучшениие Оружия
 self.values.weapon.automatic_head_shot_add = {0.6,0.75}
 self.values.weapon.passive_damage_multiplier = {1.05,1.14}
@@ -28,7 +30,7 @@ self.values.weapon.armor_piercing_chance_silencer = {1,1}
 self.values.weapon.armor_piercing_chance_2 = {1}
 
 
-self.values.ammo_bag.interaction_speed_multiplier = {0.65}
+self.values.ammo_bag.interaction_speed_multiplier = {0.1}
 self.values.temporary.overkill_damage_multiplier = {{1.75,8}}
 
 --------УЛУЧШЕНИЕ Персонажа
@@ -42,15 +44,14 @@ self.values.player.regain_throwable_from_ammo = {{chance = 0.35,chance_inc = 0.0
 self.values.player.interacting_damage_multiplier = {0.5,0.3}
 self.values.player.passive_health_addend = {1,2,3,4,6}
 self.values.player.detection_risk_damage_multiplier = {{0.05,7,"above",35},{0.05,3,"above",35}}
-self.values.player.xp_multiplier = {4}
 self.values.player.movement_speed_multiplier = {1.25}
 self.values.player.dodge_chance = {0.13}
- 
 self.values.first_aid_kit.downs_restore_chance = {0.1,0.35}
-
+self.values.player.health_decrease = {0.5,0.25}
 self.values.cooldown.long_dis_revive = {{0.75,2}}
-
-
+self.values.player.drill_autorepair_1 = {0.77}
+self.values.player.drill_autorepair_2 = {0.77}
+self.values.player.passive_health_regen = {0.03,0.04,0.05}
 
 
 ------------Бонусы для оружия
@@ -65,7 +66,76 @@ self.values.minigun.consume_no_ammo_chance = {0.1,0.3}
 self.values.flamethrower.consume_no_ammo_chance = {0.1,0.3}
 self.values.pistol.consume_no_ammo_chance = {0.1,0.3}
 self.values.flamethrower.damage_addend = {0.8,1.5}
+self.values.shotgun.damage_multiplier = {1.15,1.35}
+self.values.assault_rifle.damage_multiplier = {-0.05,-1.12}
+self.values.smg.damage_multiplier = {-0.05,-0.12}
+self.values.smg.recoil_multiplier = {0.75}
+self.values.smg.fire_rate_multiplier = {1.35}
+
 ----------------------------------------
+self.definitions.player_passive_health_regen_2 = {
+		name_id = "menu_player_passive_health_regen",
+		category = "temporary",
+		upgrade = {
+			value = 2,
+			upgrade = "passive_health_regen",
+			category = "player"
+		}
+	}
+self.definitions.player_passive_health_regen_3 = {
+		name_id = "menu_player_passive_health_regen",
+		category = "temporary",
+		upgrade = {
+			value = 3,
+			upgrade = "passive_health_regen",
+			category = "player"
+		}
+	}
+self.definitions.player_health_decrease_2 = {
+		name_id = "menu_player_health_decrease",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "health_decrease",
+			category = "player"
+		}
+	}
+self.definitions.smg_damage_multiplier_1 = {
+		name_id = "menu_shotgun_damage_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "damage_multiplier",
+			category = "smg"
+		}
+	}
+	self.definitions.smg_damage_multiplier_2 = {
+		name_id = "menu_shotgun_damage_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "damage_multiplier",
+			category = "smg"
+		}
+	}
+self.definitions.assault_rifle_damage_multiplier_1 = {
+		name_id = "menu_shotgun_damage_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "damage_multiplier",
+			category = "assault_rifle"
+		}
+	}
+	self.definitions.assault_rifle_damage_multiplier_2 = {
+		name_id = "menu_shotgun_damage_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "damage_multiplier",
+			category = "assault_rifle"
+		}
+	}
 self.definitions.flamethrower_damage_addend_1 = {
 		name_id = "menu_shotgun_damage_multiplier",
 		category = "feature",
