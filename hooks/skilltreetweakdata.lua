@@ -119,7 +119,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"speedy_reload"
 				},
 				{
-					"single_shot_ammo_return"
+					"single_shot_ammo_return",
+					"snp_eco"	
 				}
 			}
 		},
@@ -679,6 +680,46 @@ self.skills.health_regen  = {
 		icon_xy = {
 			11,
 			27
+		}
+	}
+self.skills.health_regen  = {
+		{
+			upgrades = {
+				"player_passive_health_regen_2"
+			},
+			cost = self.costs.default
+		},
+		{
+			upgrades = {
+				"player_passive_health_regen_3"
+			},
+			cost = self.costs.pro
+		},
+		name_id = "menu_health_regen_beta",
+		desc_id = "menu_health_regen_desc",
+		icon_xy = {
+			11,
+			27
+		}
+	}
+self.skills.snp_eco  = {
+		{
+			upgrades = {
+				"snp_consume_no_ammo_chance_1"
+			},
+			cost = self.costs.default
+		},
+		{
+			upgrades = {
+				"snp_consume_no_ammo_chance_2"
+			},
+			cost = self.costs.pro
+		},
+		name_id = "menu_snp_eco_beta",
+		desc_id = "menu_snp_eco_desc",
+		icon_xy = {
+			11,
+			12
 		}
 	}
 
