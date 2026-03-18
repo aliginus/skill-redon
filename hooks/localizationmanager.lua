@@ -33,9 +33,9 @@ Hooks:Add("LocalizationManagerPostInit", "localizationmanager", function(loc)
     menu_smg_master_beta = "Мастер п-п",
     menu_smg_master_beta_desc = "БАЗОВЫЙ: ##$basic;##$NL;Отдача п-п увеличена на ##25%## $NL;$NL;ПРО: ##$pro;##$NL;Скорострельность п-п увеличена на ##35%##",
     menu_health_regen_beta = "Горила",
-    menu_health_regen_desc = "БАЗОВЫЙ: ##$basic;##$NL;##4%## здоровье восстанавливается каждые ##5## секунд           $NL;$NL;ПРО: ##$pro;##$NL;##5%## здоровье восстанавливается каждые ##5## секунд  "
-
-
+    menu_health_regen_desc = "БАЗОВЫЙ: ##$basic;##$NL;##4%## здоровье восстанавливается каждые ##5## секунд           $NL;$NL;ПРО: ##$pro;##$NL;##5%## здоровье восстанавливается каждые ##5## секунд  ",
+    menu_snp_eco_beta = " ",
+    menu_snp_eco_desc = "БАЗОВЫЙ: ##$basic;##$NL;Снайперские винтовки ##иногда не тратят патроны##$NL;$NL;ПРО: ##$pro;##$NL;##иногда не тратят патроны ещё лучше##"
 
 })
 end)
