@@ -69,8 +69,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"joker"
 				},
 				{
-					"stockholm_syndrome",
-					"control_freak"
+					"control_freak",
+					"stockholm_syndrome"
 				},
 				{
 					"black_marketeer",
@@ -88,12 +88,12 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"combat_medic"
 				},
 				{
-					"tea_time",
-					"fast_learner"
+					"fast_learner",
+					"tea_time"
 				},
 				{
-					"tea_cookies",
-					"medic_2x"
+					"medic_2x",
+					"tea_cookies"
 				},
 				{
 					"fak_chance",
@@ -111,16 +111,16 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"stable_shot"
 				},
 				{
-					"rifleman",
-					"sharpshooter"
+					"sharpshooter",
+					"rifleman"
 				},
 				{
-					"spotter_teamwork",
-					"speedy_reload"
+					"speedy_reload",
+					"spotter_teamwork"
 				},
 				{
 					"single_shot_ammo_return",
-					"snp_eco"	
+					"wolverine_2"
 				}
 			}
 		},
@@ -138,8 +138,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"underdog"
 				},
 				{
-					"shotgun_cqb",
-					"close_by"
+					"close_by",
+					"shotgun_cqb"
 				},
 				{
 					"overkill",
@@ -184,8 +184,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"portable_saw"
 				},
 				{
-					"ammo_2x",
-					"carbon_blade"
+					"carbon_blade",
+					"ammo_2x"
 				},
 				{
 					"ammo_reservoir",
@@ -211,7 +211,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"smg_master"
 				},
 				{
-					"tower_defense","jack_of_all_trades"
+					"tower_defense",
+					"jack_of_all_trades"
 				}
 			}
 		},
@@ -644,13 +645,13 @@ self.skills.shotgun_to_damage = {
 self.skills.smg_master = {
 		{
 			upgrades = {
-				"smg_recoil_multiplier"
+				"smg_fire_rate_multiplier"
 			},
 			cost = self.costs.default
 		},
 		{
 			upgrades = {
-				"smg_fire_rate_multiplier"
+				"smg_fire_rate_multiplier_2"
 			},
 			cost = self.costs.pro
 		},
@@ -665,13 +666,13 @@ self.skills.smg_master = {
 self.skills.health_regen  = {
 		{
 			upgrades = {
-				"player_passive_health_regen_2"
+				"player_passive_health_multiplier_1"
 			},
 			cost = self.costs.default
 		},
 		{
 			upgrades = {
-				"player_passive_health_regen_3"
+				"player_passive_health_multiplier_2"
 			},
 			cost = self.costs.pro
 		},
@@ -682,50 +683,29 @@ self.skills.health_regen  = {
 			27
 		}
 	}
-self.skills.health_regen  = {
+self.skills.wolverine_2  = {
 		{
 			upgrades = {
-				"player_passive_health_regen_2"
+				"player_melee_damage_health_ratio_multiplier"
 			},
 			cost = self.costs.default
 		},
 		{
 			upgrades = {
-				"player_passive_health_regen_3"
+				"player_melee_damage_health_ratio_multiplier_2"
 			},
 			cost = self.costs.pro
 		},
-		name_id = "menu_health_regen_beta",
-		desc_id = "menu_health_regen_desc",
+		name_id = "menu_wolverine_2_beta",
+		desc_id = "menu_wolverine_2_desc",
 		icon_xy = {
-			11,
-			27
-		}
-	}
-self.skills.snp_eco  = {
-		{
-			upgrades = {
-				"snp_consume_no_ammo_chance_1"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"snp_consume_no_ammo_chance_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_snp_eco_beta",
-		desc_id = "menu_snp_eco_desc",
-		icon_xy = {
-			11,
-			12
+			2,
+			2
 		}
 	}
 
 
-
----------------------------------SKILLS
+---------------------------------SKILLS    
     self.skills.wolverine[1].upgrades = {"player_damage_health_ratio_multiplier"}
     self.skills.wolverine[2].upgrades = {"player_damage_health_ratio_multiplier_2"}
     
@@ -751,13 +731,17 @@ self.skills.snp_eco  = {
 	self.skills.oppressor[1].upgrades = { "player_flashbang_multiplier_1","player_flashbang_multiplier_2","player_armor_regen_time_mul_1"}
 
     self.skills.bandoliers[1].upgrades = {"extra_ammo_multiplier1","passive_ammo_bag_interaction_speed_multiplier"}
-    self.skills.pack_mule[2].upgrades = {	"player_armor_carry_bonus_1","carry_throw_distance_multiplier_2"}
+    self.skills.pack_mule[2].upgrades = {"player_armor_carry_bonus_1","carry_throw_distance_multiplier_2","carry_movement_penalty_nullifier"}
 
 	self.skills.optic_illusions[1].upgrades = {"player_camouflage_multiplier","player_camouflage_bonus_1","player_camouflage_bonus_2"}
+	self.skills.insulation[2].upgrades = {"player_taser_self_shock","player_escape_taser_1","player_resist_firing_tased" }
+
+	self.skills.carbon_blade[1].upgrades = {"saw_enemy_slicer","saw_consume_no_ammo_chance_1"}
+	self.skills.carbon_blade[2].upgrades = {"saw_ignore_shields_1","saw_panic_when_kill_1","saw_consume_no_ammo_chance_2"}
 -----------------ПЕРКИ
 
 
-self.specializations[1][5].upgrades = {"team_passive_health_multiplier","passive_health_addend_1"}
+self.specializations[1][5].upgrades = {"team_passive_health_multiplier","passive_health_addend_1","team_player_movement_speed_multiplier"}
 self.specializations[2][1].upgrades = {"passive_health_addend_1"}
 self.specializations[2][5].upgrades = {"passive_health_addend_3"}
 self.specializations[2][3].upgrades = {"passive_health_addend_2","player_uncover_multiplier"}

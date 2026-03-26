@@ -252,9 +252,167 @@ self.drill = {
 	self.access_camera_y_axis.requires_mask_off_upgrade = {
 			upgrade = "mask_off_pickup",
 			category = "player"
-		} 
+		}
+	self.trai_hold_picklock_toolsafe = {
+		icon = "equipment_bank_manager_key",
+		text_id = "hud_int_trai_toolsafe_lockpick",
+		action_text_id = "hud_action_trai_toolsafe_lockpick",
+		interact_distance = 150,
+		timer = 7,
+		start_active = true,
+		sound_start = "bar_pick_lock",
+		sound_interupt = "bar_pick_lock_cancel",
+		sound_done = "bar_pick_lock_finished",
+		upgrade_timer_multipliers = {
+			{
+				upgrade = "pick_lock_easy_speed_multiplier",
+				category = "player"
+			},
+			{
+				upgrade = "pick_lock_speed_multiplier",
+				category = "player"
+			}
+		},
+		is_lockpicking = true,
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player",
+		}
+	}
+    self.pick_lock_easy = {
+		contour = "interactable_icon",
+		icon = "equipment_bank_manager_key",
+		text_id = "hud_int_pick_lock",
+		start_active = true,
+		timer = 10,
+		interact_distance = 100,
+		requires_upgrade = {
+			upgrade = "pick_lock_easy",
+			category = "player"
+		},
+		upgrade_timer_multipliers = {
+			{
+				upgrade = "pick_lock_easy_speed_multiplier",
+				category = "player"
+			},
+			{
+				upgrade = "pick_lock_speed_multiplier",
+				category = "player"
+			}
+		},
+		action_text_id = "hud_action_picking_lock",
+		sound_start = "bar_pick_lock",
+		sound_interupt = "bar_pick_lock_cancel",
+		sound_done = "bar_pick_lock_finished",
+		is_lockpicking = true,
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.pick_lock_easy_no_skill = {
+		icon = "equipment_bank_manager_key",
+		text_id = "hud_int_pick_lock",
+		action_text_id = "hud_action_picking_lock",
+		interact_distance = 100,
+		timer = 7,
+		start_active = true,
+		sound_start = "bar_pick_lock",
+		sound_interupt = "bar_pick_lock_cancel",
+		sound_done = "bar_pick_lock_finished",
+		contour = "interactable_icon",
+		upgrade_timer_multipliers = {
+			{
+				upgrade = "pick_lock_easy_speed_multiplier",
+				category = "player"
+			},
+			{
+				upgrade = "pick_lock_speed_multiplier",
+				category = "player"
+			}
+		},
+		is_lockpicking = true,
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.pick_lock_hard = {
+		contour = "interactable_icon",
+		icon = "equipment_bank_manager_key",
+		text_id = "hud_int_pick_lock",
+		start_active = true,
+		timer = 45,
+		requires_upgrade = {
+			upgrade = "pick_lock_hard",
+			category = "player"
+		},
+		action_text_id = "hud_action_picking_lock",
+		sound_start = "bar_pick_lock",
+		sound_interupt = "bar_pick_lock_cancel",
+		sound_done = "bar_pick_lock_finished",
+		is_lockpicking = true,
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.pick_lock_hard_no_skill = {
+		icon = "equipment_bank_manager_key",
+		text_id = "hud_int_pick_lock",
+		action_text_id = "hud_action_picking_lock",
+		interact_distance = 100,
+		timer = 20,
+		start_active = true,
+		sound_start = "bar_pick_lock",
+		sound_interupt = "bar_pick_lock_cancel",
+		sound_done = "bar_pick_lock_finished",
+		contour = "interactable_icon",
+		upgrade_timer_multipliers = {
+			{
+				upgrade = "pick_lock_easy_speed_multiplier",
+				category = "player"
+			},
+			{
+				upgrade = "pick_lock_speed_multiplier",
+				category = "player"
+			}
+		},
+		is_lockpicking = true,
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
+	self.lockpick_locker = {
+		contour = "interactable_icon",
+		icon = "equipment_bank_manager_key",
+		text_id = "hud_int_pick_lock",
+		start_active = true,
+		timer = 2,
+		upgrade_timer_multipliers = {
+			{
+				upgrade = "pick_lock_easy_speed_multiplier",
+				category = "player"
+			},
+			{
+				upgrade = "pick_lock_speed_multiplier",
+				category = "player"
+			}
+		},
+		action_text_id = "hud_action_picking_lock",
+		interact_distance = 100,
+		sound_start = "bar_pick_lock",
+		sound_interupt = "bar_pick_lock_cancel",
+		sound_done = "bar_pick_lock_finished",
+		is_lockpicking = true,
+		requires_mask_off_upgrade = {
+			upgrade = "mask_off_pickup",
+			category = "player"
+		}
+	}
 ------------------------------
-self.ammo_bag = {
+    self.ammo_bag = {
 		icon = "equipment_ammo_bag",
 		text_id = "debug_interact_ammo_bag_take_ammo",
 		contour = "deployable",
