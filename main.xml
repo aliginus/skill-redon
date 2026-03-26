@@ -8,6 +8,7 @@
     <hook file="blackmarketmanager.lua" source_file="lib/managers/blackmarketmanager"/>
     <hook file="interactiontweakdata.lua" source_file="lib/tweak_data/interactiontweakdata"/>
     <hook file="playertweakdata.lua" source_file="lib/tweak_data/playertweakdata"/>
+    <hook file="raycastweaponbase.lua" source_file="lib/units/weapons/raycastweaponbase"/>  
    </Hooks>
 
     <AddFiles directory="assets/">
