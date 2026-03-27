@@ -507,23 +507,23 @@ self.definitions.weapon_passive_damage_multiplier_2 = {
 			category = "weapon"
 		}
 	}
-    self.definitions.akimbo_damage_addend_1 = {
+   self.definitions.akimbo_damage_multiplier_1 = {
 		name_id = "menu_akimbo_damage_multiplier",
 		incremental = true,
 		category = "feature",
 		upgrade = {
 			value = 1,
-			upgrade = "damage_addend",
+			upgrade = "damage_multiplier",
 			category = "akimbo"
 		}
 	}
-	self.definitions.akimbo_damage_addend_2 = {
+	self.definitions.akimbo_damage_multiplier_2 = {
 		name_id = "menu_akimbo_damage_multiplier",
 		incremental = true,
 		category = "feature",
 		upgrade = {
 			value = 2,
-			upgrade = "damage_addend",
+			upgrade = "damage_multiplier",
 			category = "akimbo"
 		}
 	}
