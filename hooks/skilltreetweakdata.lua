@@ -715,8 +715,8 @@ self.skills.wolverine_2  = {
 	self.skills.ammo_2x[1].upgrades = {"ammo_bag_ammo_increase1"}
 	self.skills.ammo_2x[2].upgrades = {"ammo_bag_quantity"}
 
-	self.skills.akimbo[1].upgrades = {"akimbo_damage_addend_1"}
-    self.skills.akimbo[2].upgrades = {"akimbo_extra_ammo_multiplier_1","akimbo_damage_addend_2"}
+	self.skills.akimbo[1].upgrades = {"akimbo_damage_multiplier_1"}
+    self.skills.akimbo[2].upgrades = {"akimbo_extra_ammo_multiplier_1","akimbo_damage_multiplier_2"}
     
     self.skills.thick_skin[2].upgrades = {"player_weapon_concealment_modifier"}
 
