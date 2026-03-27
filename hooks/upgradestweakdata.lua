@@ -60,7 +60,7 @@ self.values.assault_rifle.reload_speed_multiplier = {1.35}
 self.values.smg.reload_speed_multiplier = {1.35}
 self.values.snp.reload_speed_multiplier = {1.35}
 self.values.shotgun.damage_addend = {0.5,1.5}
-self.values.akimbo.damage_addend = {0.25,1.5}
+
 self.values.shotgun.consume_no_ammo_chance = {0.1,0.3}
 self.values.grenade_launcher.consume_no_ammo_chance = {0.1,0.3}
 self.values.minigun.consume_no_ammo_chance = {0.1,0.3}
