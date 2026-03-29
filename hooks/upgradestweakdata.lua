@@ -51,7 +51,7 @@ self.values.player.movement_speed_multiplier = {1.25}
 self.values.player.dodge_chance = {0.13}
 self.values.first_aid_kit.downs_restore_chance = {0.1,0.35}
 self.values.player.health_decrease = {0.5,0.25}
-self.values.cooldown.long_dis_revive = {{0.75,2}}
+self.values.cooldown.long_dis_revive = {{0.75,3}}
 self.values.carry.throw_distance_multiplier = {1.5,2}
 self.values.player.recharge_messiah = {math.huge}
 
