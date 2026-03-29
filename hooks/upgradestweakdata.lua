@@ -16,6 +16,8 @@ self.skill_descs.overkill.multibasic2 = "8"
 self.skill_descs.bandoliers.multibasic = "75%"
 self.specialization_descs[15][9].multiperk = "30"
 self.skill_descs.optic_illusions.multibasic = "50%"
+self.skill_descs.inspire.multipro2 = "3"
+self.skill_descs.inspire.multipro = "75%"
 ---Навык берсерк
 self.player_damage_health_ratio_threshold = 0.99
 ---Навык
