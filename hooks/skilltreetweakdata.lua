@@ -54,6 +54,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 		"x_mp7",
 		"x_ppk"
 	}
+	 
  self.trees = {
 		{
 			skill = "mastermind",
@@ -280,7 +281,9 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"ecm_booster"
 				},
 				{
-					"ecm_2x"
+					"ecm_2x",
+					"critical_hit"
+
 				}
 			}
 		},
@@ -386,11 +389,11 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"martial_arts"
 				},
 				{
-					"bloodthirst",
+					"drop_soap",
 					"steroids"
 				},
 				{
-					"drop_soap",
+					"bloodthirst",
 					"fire_rate"
 				},
 				{
@@ -429,7 +432,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 		},
 		{
 			upgrades = {
-				"weapon_passive_damage_multiplier_2"
+			   "weapon_passive_damage_multiplier_2"
 			},
 			cost = self.costs.pro
 		},
@@ -703,9 +706,33 @@ self.skills.wolverine_2  = {
 			2
 		}
 	}
+self.skills.critical_hit = {
+		{
+			upgrades = {
+				"player_xp_multiplier"
+			},
+			cost = self.costs.default
+		},
+		{
+			upgrades = {
+				"player_xp_multiplier_2"
+			},
+			cost = self.costs.pro
+		},
+		name_id = "menu_critical_beta",
+		desc_id = "menu_critical_desc",
+		icon_xy = {
+			8,
+			26
+		}
+	}
 
-
----------------------------------SKILLS    
+---------------------------------Навыки
+    self.skills.backstab[1].upgrades = {"player_detection_risk_fire_rate_multiplier"}
+	self.skills.backstab[2].upgrades = {"player_detection_risk_fire_rate_multiplier_1"}
+    self.skills.sprinter[2].upgrades = {"player_run_dodge_chance","player_crouch_dmg_reduction_1"}
+    self.skills.scavenger[1].upgrades = {"temporary_damage_speed_multiplier","player_run_dmg_reduction"}
+	self.skills.scavenger[2].upgrades = {"team_player_run_dmg_reduction_1","player_team_damage_speed_multiplier_send"}
     self.skills.wolverine[1].upgrades = {"player_damage_health_ratio_multiplier"}
     self.skills.wolverine[2].upgrades = {"player_damage_health_ratio_multiplier_2"}
     
@@ -727,7 +754,7 @@ self.skills.wolverine_2  = {
 	self.skills.fast_fire[2].upgrades = {"player_ap_bullets_1","weapon_silencer_armor_piercing_chance_2","sentry_gun_armor_piercing_chance_2","saw_armor_piercing_chance"}
 
 	self.skills.show_of_force[2].upgrades = {"player_interacting_damage_multiplier_2"}
-	self.skills.oppressor[2].upgrades = {"player_level_2_armor_addend","player_level_3_armor_addend","player_level_4_armor_addend"}
+	self.skills.oppressor[2].upgrades = {"player_level_2_armor_addend","player_level_3_armor_addend","player_level_4_armor_addend","player_level_5_armor_addend","player_level_6_armor_addend","player_level_7_armor_addend"}
 	self.skills.oppressor[1].upgrades = { "player_flashbang_multiplier_1","player_flashbang_multiplier_2","player_armor_regen_time_mul_1"}
 
     self.skills.bandoliers[1].upgrades = {"extra_ammo_multiplier1","passive_ammo_bag_interaction_speed_multiplier"}
@@ -765,7 +792,7 @@ self.specializations[22][3].upgrades = {"player_copr_out_of_health_move_slow_1",
 self.specializations[22][7].upgrades = {"passive_health_addend_3"}
 self.specializations[22][9].upgrades = { "player_activate_ability_downed","player_copr_static_damage_ratio_2","player_passive_loot_drop_multiplier","passive_health_addend_4","player_copr_kill_life_leech_2"}
 self.specializations[5][3].upgrades = {"player_perk_armor_regen_timer_multiplier_2","akimbo_extra_ammo_multiplier_2"}
-self.specializations[4][3].upgrades = {"player_crouch_dodge_chance_2"}
+self.specializations[4][3].upgrades = {"player_crouch_dodge_chance_1","team_player_dodge_chance"}
 
 
 
