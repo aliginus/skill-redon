@@ -1,3 +1,5 @@
+
+
 Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 
 
@@ -53,9 +55,31 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 		"x_m45",
 		"x_mp7",
 		"x_ppk"
-	}
-	 
- self.trees = {
+	} 
+ 
+self.trees = {
+		{
+			skill = "mastermind",
+			name_id = "st_menu_mastermind_inspire",
+			unlocked = true,
+			background_texture = "guis/textures/pd2/skilltree/bg_mastermind",
+			tiers = {
+				{
+					"combat_medic"
+				},
+				{
+					"tea_time",
+					"fast_learner"
+				},
+				{
+					"tea_cookies",
+					"medic_2x"
+				},
+				{
+					"inspire"
+				}
+			}
+		},
 		{
 			skill = "mastermind",
 			name_id = "st_menu_mastermind_dominate",
@@ -70,35 +94,11 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"joker"
 				},
 				{
-					"control_freak",
-					"stockholm_syndrome"
+					"stockholm_syndrome",
+					"control_freak"
 				},
 				{
-					"black_marketeer",
-					"health_regen"
-				}
-			}
-		},
-		{
-			skill = "mastermind",
-			name_id = "st_menu_mastermind_inspire",
-			unlocked = true,
-			background_texture = "guis/textures/pd2/skilltree/bg_mastermind",
-			tiers = {
-				{
-					"combat_medic"
-				},
-				{
-					"fast_learner",
-					"tea_time"
-				},
-				{
-					"medic_2x",
-					"tea_cookies"
-				},
-				{
-					"fak_chance",
-					"inspire"
+					"black_marketeer"
 				}
 			}
 		},
@@ -112,16 +112,15 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"stable_shot"
 				},
 				{
-					"sharpshooter",
-					"rifleman"
+					"rifleman",
+					"sharpshooter"
 				},
 				{
-					"speedy_reload",
-					"spotter_teamwork"
+					"spotter_teamwork",
+					"speedy_reload"
 				},
 				{
-					"single_shot_ammo_return",
-					"wolverine_2"
+					"single_shot_ammo_return"
 				}
 			}
 		},
@@ -132,19 +131,18 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 			background_texture = "guis/textures/pd2/skilltree/bg_mastermind",
 			tiers = {
 				{
+					"underdog"
+				},
+				{
+					"shotgun_cqb",
 					"shotgun_impact"
 				},
 				{
 					"far_away",
-					"underdog"
+					"close_by"
 				},
 				{
-					"close_by",
-					"shotgun_cqb"
-				},
-				{
-					"overkill",
-					"shotgun_to_damage"
+					"overkill"
 				}
 			}
 		},
@@ -166,7 +164,6 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"prison_wife"
 				},
 				{
-					"risk_to_damage",
 					"juggernaut"
 				}
 			}
@@ -185,12 +182,11 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"portable_saw"
 				},
 				{
-					"carbon_blade",
-					"ammo_2x"
+					"ammo_2x",
+					"carbon_blade"
 				},
 				{
-					"ammo_reservoir",
-					"consume_skill"
+					"ammo_reservoir"
 				}
 			}
 		},
@@ -209,11 +205,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 				},
 				{
 					"engineering",
-					"smg_master"
+					"jack_of_all_trades"
 				},
 				{
-					"tower_defense",
-					"jack_of_all_trades"
+					"tower_defense"
 				}
 			}
 		},
@@ -235,7 +230,6 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"kick_starter"
 				},
 				{
-					"flamethrower",
 					"fire_trap"
 				}
 			}
@@ -247,10 +241,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 			background_texture = "guis/textures/pd2/skilltree/bg_mastermind",
 			tiers = {
 				{
-					"heavy_impact"
+					"steady_grip"
 				},
 				{
-					"steady_grip",
+					"heavy_impact",
 					"fire_control"
 				},
 				{
@@ -258,8 +252,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"fast_fire"
 				},
 				{
-					"body_expertise",
-                    "head_shot"
+					"body_expertise"
 				}
 			}
 		},
@@ -281,9 +274,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"ecm_booster"
 				},
 				{
-					"ecm_2x",
-					"critical_hit"
-
+					"ecm_2x"
 				}
 			}
 		},
@@ -294,10 +285,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 			background_texture = "guis/textures/pd2/skilltree/bg_mastermind",
 			tiers = {
 				{
-					"awareness"
+					"sprinter"
 				},
 				{
-					"sprinter",
+					"awareness",
 					"thick_skin"
 				},
 				{
@@ -305,7 +296,6 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"insulation"
 				},
 				{
-					"concealment",
 					"jail_diet"
 				}
 			}
@@ -324,12 +314,11 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"silence_expert"
 				},
 				{
-					"silent_killer",
+					"backstab",
 					"hitman"
 				},
 				{
-					"unseen_strike",
-                    "backstab"
+					"unseen_strike"
 				}
 			}
 		},
@@ -344,15 +333,14 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 				},
 				{
 					"dance_instructor",
-					"expert_handling"
-				},
-				{
-					"gun_fighter",
 					"akimbo"
 				},
 				{
-					"trigger_happy",
-					"consume_pistl"
+					"gun_fighter",
+					"expert_handling"
+				},
+				{
+					"trigger_happy"
 				}
 			}
 		},
@@ -363,7 +351,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 			background_texture = "guis/textures/pd2/skilltree/bg_mastermind",
 			tiers = {
 				{
-					"player_health"
+					"nine_lives"
 				},
 				{
 					"running_from_death",
@@ -374,8 +362,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"feign_death"
 				},
 				{
-					"messiah",
-                    "nine_lives"
+					"messiah"
 				}
 			}
 		},
@@ -389,372 +376,65 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 					"martial_arts"
 				},
 				{
-					"drop_soap",
+					"bloodthirst",
 					"steroids"
 				},
 				{
-					"bloodthirst",
-					"fire_rate"
+					"drop_soap",
+					"frenzy"
 				},
 				{
-					"frenzy",
-                    "wolverine"
+					"wolverine"
 				}
 			}
 		}
 	}
-    self.skills.player_health = {
-		{
-			upgrades = {
-				"player_health_addend"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"player_health_addend_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_player_health_beta",
-		desc_id = "menu_player_health_desc",
-		icon_xy = {
-			11,
-			11
-		}
-	}
-    self.skills.fire_rate = {
-		{
-			upgrades = {
-				"weapon_fire_rate_multiplier"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-			   "weapon_passive_damage_multiplier_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_fire_rate_beta",
-		desc_id = "menu_fire_rate_desc",
-		icon_xy = {
-			4,
-			11
-		}
-	}
-    self.skills.silent_killer = {
-		{
-			upgrades = {
-				"weapon_silencer_damage_multiplier"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"weapon_silencer_damage_multiplier_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_silent_beta",
-		desc_id = "menu_silent_desc",
-		icon_xy = {
-			5,
-			9
-		}
-	}
-    self.skills.head_shot = {
-		{
-			upgrades = {
-				"weapon_passive_headshot_damage_multiplier_2"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"weapon_passive_headshot_damage_multiplier_3"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_head_shot_beta",
-		desc_id = "menu_head_shot_desc",
-		icon_xy = {
-			10,
-			12
-		}
-	}
-    self.skills.ecm_booster = {
-		{
-			upgrades = {
-				"ecm_jammer_duration_multiplier",
-				"ecm_jammer_feedback_duration_boost",
-				"ecm_jammer_can_open_sec_doors"
-			},
-			cost = self.costs.hightier
-		},
-		{
-			upgrades = {
-				"player_alarm_pager_speed_multiplier_2"
-			},
-			cost = self.costs.hightierpro
-		},
-		name_id = "menu_ecm_booster_beta",
-		desc_id = "menu_ecm_booster_beta_desc",
-		icon_xy = {
-			6,
-			3
-		}
-	}
-	self.skills.risk_to_damage = {
-		{
-			upgrades = {
-				"player_detection_risk_damage_multiplier"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"player_detection_risk_damage_multiplier_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_risk_to_damage_beta",
-		desc_id = "menu_risk_to_damage_desc",
-		icon_xy = {
-			9,
-			12
-		}
-	}
-	self.skills.concealment = {
-		{
-			upgrades = {
-				"player_concealment_bonus_2"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"player_dodge_chance"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_concealment_beta",
-		desc_id = "menu_concealment_desc",
-		icon_xy = {
-			0,
-			3
-		}
-	}
-	self.skills.consume_skill = {
-		{
-			upgrades = {
-				"flamethrower_consume_no_ammo_chance_1","minigun_consume_no_ammo_chance_1","grenade_launcher_consume_no_ammo_chance_1","shotgun_consume_no_ammo_chance_1"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"flamethrower_consume_no_ammo_chance_2","minigun_consume_no_ammo_chance_2","grenade_launcher_consume_no_ammo_chance_2","shotgun_consume_no_ammo_chance_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_consume_skill_beta",
-		desc_id = "menu_consume_skill_desc",
-		icon_xy = {
-			11,
-			12
-		}
-	}
-	self.skills.fak_chance = {
-		{
-			upgrades = {
-				"first_aid_kit_downs_restore_chance"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"first_aid_kit_downs_restore_chance_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_fak_chance_beta",
-		desc_id = "menu_fak_chance_desc",
-		icon_xy = {
-			6,
-			12
-		}
-	}
-    self.skills.consume_pistl = {
-		{
-			upgrades = {
-				"pistol_consume_no_ammo_chance_1"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"pistol_consume_no_ammo_chance_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_consume_pstl_beta",
-		desc_id = "menu_consume_pstl_desc",
-		icon_xy = {
-			11,
-			12
-		}
-	}
-    self.skills.flamethrower = {
-		{
-			upgrades = {
-				"flamethrower_damage_addend_1"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"flamethrower_damage_addend_1"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_flamethrower_beta",
-		desc_id = "menu_flamethrower_desc",
-		icon_xy = {
-			7,
-			12
-		}
-	}
-self.skills.shotgun_to_damage = {
-		{
-			upgrades = {
-				"shotgun_damage_multiplier_1","assault_rifle_damage_multiplier_1","smg_damage_multiplier_1"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"shotgun_damage_multiplier_2","assault_rifle_damage_multiplier_2","smg_damage_multiplier_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_shotgun_dmg_beta",
-		desc_id = "menu_shotgun_dmg_desc",
-		icon_xy = {
-			11,
-			12
-		}
-	}
-self.skills.smg_master = {
-		{
-			upgrades = {
-				"smg_fire_rate_multiplier"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"smg_fire_rate_multiplier_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_smg_master_beta",
-		desc_id = "menu_smg_master_beta_desc",
-		icon_xy = {
-			3,
-			3
-		}
-	}
-
-self.skills.health_regen  = {
-		{
-			upgrades = {
-				"player_passive_health_multiplier_1"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"player_passive_health_multiplier_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_health_regen_beta",
-		desc_id = "menu_health_regen_desc",
-		icon_xy = {
-			11,
-			27
-		}
-	}
-self.skills.wolverine_2  = {
-		{
-			upgrades = {
-				"player_melee_damage_health_ratio_multiplier"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"player_melee_damage_health_ratio_multiplier_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_wolverine_2_beta",
-		desc_id = "menu_wolverine_2_desc",
-		icon_xy = {
-			2,
-			2
-		}
-	}
-self.skills.critical_hit = {
-		{
-			upgrades = {
-				"player_xp_multiplier"
-			},
-			cost = self.costs.default
-		},
-		{
-			upgrades = {
-				"player_xp_multiplier_2"
-			},
-			cost = self.costs.pro
-		},
-		name_id = "menu_critical_beta",
-		desc_id = "menu_critical_desc",
-		icon_xy = {
-			8,
-			26
-		}
-	}
-
----------------------------------Навыки
-    self.skills.backstab[1].upgrades = {"player_detection_risk_fire_rate_multiplier"}
-	self.skills.backstab[2].upgrades = {"player_detection_risk_fire_rate_multiplier_1"}
-    self.skills.sprinter[2].upgrades = {"player_run_dodge_chance","player_crouch_dmg_reduction_1"}
+---------------------------------Навыки"weapon_passive_damage_multiplier_2"
+    self.skills.jail_workout.icon_xy = {4,8}
+    self.skills.unseen_strike[1].upgrades = {"weapon_fire_rate_multiplier"}
+	self.skills.unseen_strike[2].upgrades = {"weapon_damage_multiplier"}
+    self.skills.shotgun_impact[1].upgrades = {"shotgun_recoil_index_addend","shotgun_damage_addend_1"}
+    self.skills.shotgun_impact[2].upgrades = {"shotgun_damage_addend_2"}
+    self.skills.combat_medic.icon_xy = {10,27}
+    self.skills.frenzy.icon_xy = {4,11 }
+    self.skills.frenzy[1].upgrades = {"weapon_damage_addend_1" }
+	self.skills.frenzy[2].upgrades = {"weapon_damage_addend_2" }
+	
+	self.skills.inspire[2].upgrades = {"cooldown_long_dis_revive","player_heisters_never_die_1"}
+	self.skills.steady_grip[1].upgrades = {"player_stability_increase_bonus_1"}
+	self.skills.stable_shot[1].upgrades = { "player_weapon_accuracy_increase_1"}	
+	
+	self.skills.sprinter[2].upgrades = {"player_run_dodge_chance"}
     self.skills.scavenger[1].upgrades = {"temporary_damage_speed_multiplier","player_run_dmg_reduction"}
 	self.skills.scavenger[2].upgrades = {"team_player_run_dmg_reduction_1","player_team_damage_speed_multiplier_send"}
     self.skills.wolverine[1].upgrades = {"player_damage_health_ratio_multiplier"}
     self.skills.wolverine[2].upgrades = {"player_damage_health_ratio_multiplier_2"}
     
+    self.skills.jail_diet[1].upgrades = {"player_dodge_chance"}
+    self.skills.jail_diet[2].upgrades = {"player_dodge_chance_1"}
+    self.skills.hitman.icon_xy = {5,9}
+	self.skills.hitman[1].upgrades = {"weapon_silencer_damage_addend","player_marked_enemy_extra_damage"} 
+    self.skills.hitman[2].upgrades = {"weapon_silencer_damage_addend_2","player_marked_inc_dmg_distance_1","weapon_steelsight_highlight_specials","player_mark_enemy_time_multiplier"} 
 	self.skills.medic_2x[1].upgrades = {"doctor_bag_amount_increase1"}
 	self.skills.medic_2x[2].upgrades = {"doctor_bag_quantity"}
-    
+    self.skills.backstab[1].upgrades = {"player_critical_hit_chance_1"}
+	self.skills.backstab[2].upgrades = {"player_critical_hit_chance_2","player_unseen_increased_crit_chance_1","player_unseen_temp_increased_crit_chance_1"} 
 	self.skills.ammo_2x[1].upgrades = {"ammo_bag_ammo_increase1"}
-	self.skills.ammo_2x[2].upgrades = {"ammo_bag_quantity"}
+	self.skills.ammo_2x[2].upgrades = {"ammo_bag_quantity","grenade_crate_quantity"}
 
-	self.skills.akimbo[1].upgrades = {"akimbo_damage_multiplier_1"}
-    self.skills.akimbo[2].upgrades = {"akimbo_extra_ammo_multiplier_1","akimbo_damage_multiplier_2"}
+	self.skills.akimbo[1].upgrades = {"akimbo_damage_addend_1"}
+    self.skills.akimbo[2].upgrades = {"akimbo_extra_ammo_multiplier_1","akimbo_damage_addend_2"}
     
     self.skills.thick_skin[2].upgrades = {"player_weapon_concealment_modifier"}
 
-    self.skills.shotgun_impact[1].upgrades = {"shotgun_recoil_index_addend","shotgun_damage_addend_1"}
-    self.skills.shotgun_impact[2].upgrades = {"shotgun_damage_addend_2"}
+    self.skills.nine_lives[1].upgrades = {"player_bleed_out_health_multiplier","player_health_addend"}
 
     self.skills.fast_fire.icon_xy = {1,27}
 	self.skills.fast_fire[2].upgrades = {"player_ap_bullets_1","weapon_silencer_armor_piercing_chance_2","sentry_gun_armor_piercing_chance_2","saw_armor_piercing_chance"}
 
 	self.skills.show_of_force[2].upgrades = {"player_interacting_damage_multiplier_2"}
-	self.skills.oppressor[2].upgrades = {"player_level_2_armor_addend","player_level_3_armor_addend","player_level_4_armor_addend","player_level_5_armor_addend","player_level_6_armor_addend","player_level_7_armor_addend"}
+	---
+	self.skills.oppressor[2].upgrades = {"player_level_2_armor_addend","player_level_3_armor_addend","player_level_4_armor_addend","player_level_5_armor_addend","player_level_6_armor_addend","player_level_7_armor_addend" }
 	self.skills.oppressor[1].upgrades = { "player_flashbang_multiplier_1","player_flashbang_multiplier_2","player_armor_regen_time_mul_1"}
 
     self.skills.bandoliers[1].upgrades = {"extra_ammo_multiplier1","passive_ammo_bag_interaction_speed_multiplier"}
@@ -766,49 +446,19 @@ self.skills.critical_hit = {
 	self.skills.carbon_blade[1].upgrades = {"saw_enemy_slicer","saw_consume_no_ammo_chance_1"}
 	self.skills.carbon_blade[2].upgrades = {"saw_ignore_shields_1","saw_panic_when_kill_1","saw_consume_no_ammo_chance_2"}
 -----------------ПЕРКИ
-
-
-self.specializations[1][5].upgrades = {"team_passive_health_multiplier","passive_health_addend_1","team_player_movement_speed_multiplier"}
-self.specializations[2][1].upgrades = {"passive_health_addend_1"}
-self.specializations[2][5].upgrades = {"passive_health_addend_3"}
-self.specializations[2][3].upgrades = {"passive_health_addend_2","player_uncover_multiplier"}
-self.specializations[2][9].upgrades = {"player_passive_loot_drop_multiplier","player_passive_health_regen","passive_health_addend_4","passive_health_addend_5"}
-self.specializations[10][3].upgrades = {"temporary_loose_ammo_give_team","passive_health_addend_1","passive_health_addend_2"}
-self.specializations[10][5].upgrades = {"player_loose_ammo_restore_health_give_team","passive_health_addend_3"}
-self.specializations[11][3].upgrades = {"player_damage_to_hot_2","passive_health_addend_1","passive_health_addend_2"}
-self.specializations[11][7].upgrades = {"player_damage_to_hot_4","passive_health_addend_3"}
-self.specializations[13][3].upgrades = {"player_armor_health_store_amount_2","passive_health_addend_1"}
-self.specializations[13][7].upgrades = {"player_armor_health_store_amount_3","passive_health_addend_3"}
-self.specializations[13][5].upgrades = {"player_armor_max_health_store_multiplier","player_passive_dodge_chance_1","passive_health_addend_2"}
-self.specializations[15][1].upgrades = { "player_passive_always_regen_armor_1","temporary_armor_break_invulnerable_1"}
-self.specializations[17][3].upgrades = {"passive_health_addend_1"}
-self.specializations[17][7].upgrades = {"passive_health_addend_3","player_chico_injector_low_health_multiplier"}
-self.specializations[17][9].upgrades = {"player_passive_loot_drop_multiplier","passive_health_addend_4","player_chico_injector_health_to_speed"}
-self.specializations[17][5].upgrades = {"player_chico_preferred_target","passive_health_addend_2"}
-self.specializations[20][3].upgrades = {"passive_health_addend_1","passive_health_addend_2"}
-self.specializations[20][7].upgrades =  {"passive_health_addend_3"}
-self.specializations[21][3].upgrades = {"passive_health_addend_1","passive_health_addend_2"}
-self.specializations[22][3].upgrades = {"player_copr_out_of_health_move_slow_1","passive_health_addend_1","passive_health_addend_2"}
-self.specializations[22][7].upgrades = {"passive_health_addend_3"}
-self.specializations[22][9].upgrades = { "player_activate_ability_downed","player_copr_static_damage_ratio_2","player_passive_loot_drop_multiplier","passive_health_addend_4","player_copr_kill_life_leech_2"}
-self.specializations[5][3].upgrades = {"player_perk_armor_regen_timer_multiplier_2","akimbo_extra_ammo_multiplier_2"}
-self.specializations[4][3].upgrades = {"player_crouch_dodge_chance_1","team_player_dodge_chance"}
+     
+    self.specializations[4][3].upgrades = {"player_crouch_dodge_chance_1"}
+    self.specializations[5][3].upgrades = {"player_perk_armor_regen_timer_multiplier_2","akimbo_extra_ammo_multiplier_2"}
+     
+---
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
 
 end)
+
+ 

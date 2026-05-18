@@ -1,4 +1,4 @@
-<mod name="[ Skill's Redon]" author="zein" color="Color(0,0,0)">
+<mod name="[ Skill's Redon]" author="zein" >
 
    <Hooks directory="Hooks">
     <hook file="skilltreetweakdata.lua" source_file="lib/tweak_data/skilltreetweakdata"/>
@@ -8,7 +8,10 @@
     <hook file="blackmarketmanager.lua" source_file="lib/managers/blackmarketmanager"/>
     <hook file="interactiontweakdata.lua" source_file="lib/tweak_data/interactiontweakdata"/>
     <hook file="playertweakdata.lua" source_file="lib/tweak_data/playertweakdata"/>
-    <hook file="raycastweaponbase.lua" source_file="lib/units/weapons/raycastweaponbase"/>  
+    <hook file="raycastweaponbase.lua" source_file="lib/units/weapons/raycastweaponbase"/>
+    <hook file="playerstandard.lua"    source_file="lib/units/beings/player/states/playerstandard"/>
+    <hook file="skilltreemanager.lua" source_file="lib/managers/skilltreemanager"/>
+    <hook file="equipmentstweakdata.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
    </Hooks>
 
     <AddFiles directory="assets/">

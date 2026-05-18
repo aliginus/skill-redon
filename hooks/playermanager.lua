@@ -68,7 +68,6 @@ function PlayerManager:movement_speed_multiplier(speed_state, bonus_multiplier, 
 
 	multiplier = multiplier + self:get_hostage_bonus_multiplier("speed") - 1
 	multiplier = multiplier + self:upgrade_value("player", "movement_speed_multiplier", 1) - 1
-	multiplier = multiplier + self:team_upgrade_value("player", "movement_speed_multiplier", 1) - 1  -- БОНУС КАПО
 
 	if self:num_local_minions() > 0 then
 		multiplier = multiplier + self:upgrade_value("player", "minion_master_speed_multiplier", 1) - 1
@@ -141,3 +140,4 @@ function PlayerManager:damage_reduction_skill_multiplier(damage_type,running,mov
 	
 	return multiplier
 end
+ 

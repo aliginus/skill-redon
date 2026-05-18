@@ -19,7 +19,7 @@ function BlackMarketManager:visibility_modifiers()
 end
 
 
-function BlackMarketManager:damage_multiplier(name, categories, silencer, detection_risk, current_state, blueprint)
+function BlackMarketManager:damage_multiplier(name, categories, silencer, detection_risk, current_state, blueprint )
 	local multiplier = 1
 
 	if self:ignore_damage_upgrades(name, blueprint) then
@@ -33,11 +33,9 @@ function BlackMarketManager:damage_multiplier(name, categories, silencer, detect
 	multiplier = multiplier + 1 - managers.player:upgrade_value(name, "damage_multiplier", 1)
 	multiplier = multiplier + 1 - managers.player:upgrade_value("player", "passive_damage_multiplier", 1)
 	multiplier = multiplier + 1 - managers.player:upgrade_value("weapon", "passive_damage_multiplier", 1)
-    multiplier = multiplier + 1 - managers.player:team_upgrade_value("weapon", "passive_damage_multiplier", 1) --New skills
-	if silencer then
-		multiplier = multiplier + 1 - managers.player:upgrade_value("weapon", "silencer_damage_multiplier", 1)
-	end
-
+    multiplier = multiplier + 1 - managers.player:upgrade_value("weapon", "damage_multiplier", 1)
+     
+	
 	local detection_risk_damage_multiplier = managers.player:upgrade_value("player", "detection_risk_damage_multiplier")
 	multiplier = multiplier - managers.player:get_value_from_risk_upgrade(detection_risk_damage_multiplier, detection_risk)
 
@@ -55,9 +53,11 @@ function BlackMarketManager:damage_multiplier(name, categories, silencer, detect
 	if blueprint and self:is_weapon_modified(managers.weapon_factory:get_factory_id_by_weapon_id(name), blueprint) then
 		multiplier = multiplier + 1 - managers.player:upgrade_value("weapon", "modded_damage_multiplier", 1)
 	end
-
+  
 	multiplier = multiplier + 1 - managers.player:get_property("trigger_happy", 1)
-
+    
+   
+	
 	return self:_convert_add_to_mul(multiplier)
 end
 
@@ -69,7 +69,30 @@ function BlackMarketManager:fire_rate_multiplier(name, categories, silencer, det
 	for _, category in ipairs(categories) do
 		multiplier = multiplier + 1 - managers.player:upgrade_value(category, "fire_rate_multiplier", 1)
 	end
-    local detection_risk_fire_rate_multiplier = managers.player:upgrade_value("player", "detection_risk_fire_rate_multiplier")
+    local detection_risk_fire_rate_multiplier = managers.player:upgrade_value("player", "detection_risk_fire_rate_multiplier") -- NEw skill
 	multiplier = multiplier - managers.player:get_value_from_risk_upgrade(detection_risk_fire_rate_multiplier, detection_risk) 
 	return self:_convert_add_to_mul(multiplier)
 end
+
+function BlackMarketManager:damage_addend(name, categories, silencer, detection_risk, current_state, blueprint)
+	local value = 0
+
+	if self:ignore_damage_upgrades(name, blueprint) then
+		return value
+	end
+
+	value = value + managers.player:upgrade_value("player", "damage_addend", 0)
+	value = value + managers.player:upgrade_value("weapon", "damage_addend", 0)
+	value = value + managers.player:upgrade_value(name, "damage_addend", 0)
+   
+	for _, category in ipairs(categories) do
+		value = value + managers.player:upgrade_value(category, "damage_addend", 0)
+	end
+    
+	if silencer then
+		value = value + managers.player:upgrade_value("weapon", "silencer_damage_addend", 0)
+	end
+  
+	return value
+end
+

@@ -2,144 +2,217 @@ Hooks:PostHook(UpgradesTweakData, "init", "Skills_Buff", function(self)
 
 self.values.grenade_launcher = self.values.grenade_launcher or {}
 self.values.flamethrower = self.values.flamethrower or {}
-
+ 
 
 --------Описание 
 self.skill_descs.body_expertise.multibasic = "60%"
 self.skill_descs.body_expertise.multipro = "75%"
-self.skill_descs.shotgun_impact.multibasic2 = "+8"
-self.skill_descs.shotgun_impact.multipro = "+15"
+ 
 self.skill_descs.heavy_impact.multibasic = "33%"
 self.skill_descs.heavy_impact.multipro = "66%"
 self.skill_descs.speedy_reload.multibasic = "35%"
-self.skill_descs.awareness.multibasic = "25%"
+ 
 self.skill_descs.overkill.multibasic2 = "8"
 self.skill_descs.bandoliers.multibasic = "75%"
-self.specialization_descs[15][9].multiperk = "30"
+
 self.skill_descs.optic_illusions.multibasic = "50%"
 self.skill_descs.inspire.multipro2 = "3"
 self.skill_descs.inspire.multipro = "75%"
-self.specialization_descs[23][1].multiperk2 = "3"
+self.skill_descs.shotgun_impact.multibasic2 = "+5" 
+self.skill_descs.shotgun_impact.multipro2 = "+10"
+ 
 ---Навык берсерк
 self.player_damage_health_ratio_threshold = 0.99
 ---Навык
 self.sharpshooter_categories = {"assault_rifle","smg","shotgun","pistol"}
----------Улучшениие Оружия
-self.values.weapon.automatic_head_shot_add = {0.6,0.75}
-self.values.weapon.passive_damage_multiplier = {1.05,1.09}
-self.values.weapon.silencer_damage_multiplier = {1.15,1.3}
-self.values.weapon.passive_headshot_damage_multiplier = {1.25,1.30,1.35}
-self.values.weapon.knock_down = {0.33,0.66}
-self.values.weapon.armor_piercing_chance_silencer = {1,1}
-self.values.weapon.armor_piercing_chance_2 = {1}
 
 
-self.values.ammo_bag.interaction_speed_multiplier = {0.6}
-self.values.temporary.overkill_damage_multiplier = {{1.75,8}}
-self.values.akimbo.damage_multiplier = {1.5,1.9}
+
+
+
+
+
+
+
 --------УЛУЧШЕНИЕ Персонажа
-self.values.player.weapon_concealment_modifier = {2}
-self.values.player.body_armor.dodge = {0,-0.05,-0.1,-0.15,-0.2,-0.25,-0.55}
-self.values.player.damage_health_ratio_multiplier = {0.99,1.19}
-self.values.player.melee_damage_health_ratio_multiplier = {0.99,1.19}
-self.values.player.health_addend = {1.5,3}
-self.values.player.alarm_pager_speed_multiplier = {0.9,0.65}
-self.values.player.extra_ammo_multiplier = {1.75}
-self.values.player.regain_throwable_from_ammo = {{chance = 0.35,chance_inc = 0.01}}
-self.values.player.interacting_damage_multiplier = {0.5,0.3}
-self.values.player.passive_health_addend = {1,2,3,4,6}
-self.values.player.detection_risk_damage_multiplier = {{0.05,7,"above",35},{0.05,3,"above",35}}
-self.values.player.movement_speed_multiplier = {1.25}
-self.values.player.dodge_chance = {0.13}
-self.values.first_aid_kit.downs_restore_chance = {0.1,0.35}
-self.values.cooldown.long_dis_revive = {{0.75,3}}
-self.values.carry.throw_distance_multiplier = {1.5,2}
-self.values.player.recharge_messiah = {math.huge}
-self.morale_boost_base_cooldown = 0
 
 ---НОВЫЕ НАВЫКИ
-self.values.team.player.movement_speed_multiplier = {1.2}
-self.values.player.run_dmg_reduction = {0.8}
-self.values.team.player.run_dmg_reduction2 = {0.3}
-
+ 
+self.values.player.run_dmg_reduction = {0.3}
+self.values.team.player.run_dmg_reduction2 = {0.2}
+self.values.player.armor_addend = {2}
 self.values.player.level_5_armor_addend = {2}
 self.values.player.level_6_armor_addend = {2}
 self.values.player.level_7_armor_addend = {2}
-self.values.team.weapon.passive_damage_multiplier = {3,6}
-
-self.values.player.detection_risk_fire_rate_multiplier = {
-		{
-			0.01,
-			3,
-			"below",
-			35,
-			0.1
-		},
-		{
-			0.01,
-			1,
-			"below",
-			35,
-			0.1
-		}
-	}
-self.definitions.player_detection_risk_fire_rate_multiplier = {
-		name_id = "menu_player_detection_risk_damage_multiplier",
-		category = "feature",
-		upgrade = {
-			value = 1,
-			upgrade = "detection_risk_fire_rate_multiplier",
-			category = "player"
-		}
-	}
-self.definitions.player_detection_risk_fire_rate_multiplier_1 = {
-		name_id = "menu_player_detection_risk_damage_multiplier",
-		category = "feature",
-		upgrade = {
-			value = 2,
-			upgrade = "detection_risk_fire_rate_multiplier",
-			category = "player"
-		}
-	}
+self.values.player.heisters_never_die = {500} -- ? 
+self.values.player.dodge_chance = {0.08,0.15} 
+self.values.first_aid_kit.downs_restore_chance = {0.1,0.35}
+self.values.carry.throw_distance_multiplier = {1.5,2}
+self.values.player.detection_risk_damage_multiplier = {{0.05,7,"above",35},{0.05,3,"above",35}}
+self.values.player.passive_health_addend = {4,6}
+self.values.player.detection_risk_fire_rate_multiplier = {{0.01,3,"below",35,0.1},{0.01,1,"below",35,0.1}}
+self.values.player.health_addend = {3}
+self.values.player.alarm_pager_speed_multiplier = {0.9,0.65}
 self.values.team.xp.multiplier = {1.3,1.75}
-self.values.player.primary_reload_secondary = {3}
-self.values.player.secondary_reload_primary = {3}
+self.values.player.damage_health_ratio_multiplier = {0.99,1.19}
+self.values.player.melee_damage_health_ratio_multiplier = {0.99,1.19}
+self.values.player.weapon_concealment_modifier = {2}
+self.values.ammo_bag.interaction_speed_multiplier = {0.6}
+self.values.akimbo.damage_addend = {1.5,1.9} --15 19
+---Старые Навыки 
+self.values.cooldown.long_dis_revive = {{0.75,3}}
+self.values.player.recharge_messiah = {math.huge}
+self.morale_boost_base_cooldown = 0
+ 
+self.values.player.interacting_damage_multiplier = {0.5,0.3}
+self.values.player.extra_ammo_multiplier = {1.75}
+self.values.player.regain_throwable_from_ammo = {{chance = 0.35,chance_inc = 0.01}}
 
-------------Бонусы для оружия
+self.values.player.body_armor.dodge = {0,-0.05,-0.1,-0.15,-0.2,-0.25,-0.55}
+self.values.temporary.overkill_damage_multiplier = {{1.75,8}}
+ 
+-----------Бонусы для оружия
 self.values.assault_rifle.reload_speed_multiplier = {1.35}
 self.values.smg.reload_speed_multiplier = {1.35}
 self.values.snp.reload_speed_multiplier = {1.35}
-self.values.shotgun.damage_addend = {0.8,1.5}
-
+self.values.shotgun.damage_addend = { 0.5,1.5}
+ 
+self.values.weapon.consume_no_ammo_chance = {0.9}
 self.values.shotgun.consume_no_ammo_chance = {0.1,0.3}
 self.values.grenade_launcher.consume_no_ammo_chance = {0.1,0.3}
 self.values.minigun.consume_no_ammo_chance = {0.1,0.3}
 self.values.flamethrower.consume_no_ammo_chance = {0.1,0.3}
 self.values.pistol.consume_no_ammo_chance = {0.1,0.3}
-self.values.flamethrower.damage_addend = {0.8,1.5}
-self.values.shotgun.damage_multiplier = {1.15,1.35}
-self.values.assault_rifle.damage_multiplier = {-0.05,-1.12}
-self.values.smg.damage_multiplier = {-0.05,-0.12}
-self.values.smg.recoil_multiplier = {0.75}
-self.values.smg.fire_rate_multiplier = {1.35,1.66}
 self.values.saw.consume_no_ammo_chance = {0.65,0.75}
+---------Улучшениие Оружия
+self.values.weapon.automatic_head_shot_add = {0.6,0.75}
+self.values.weapon.passive_damage_multiplier = {1.05,2}
+self.values.weapon.damage_addend = {0.9,1.2}
+self.values.weapon.damage_multiplier = {2}
+self.values.weapon.silencer_damage_addend = {1.5,1.9}
+self.values.weapon.passive_headshot_damage_multiplier = {1.25,1.30,1.35}
+self.values.weapon.knock_down = {0.33,0.66}
+self.values.weapon.armor_piercing_chance_silencer = {1,1}
+self.values.weapon.armor_piercing_chance_2 = {1}
 ----------------------------------------
-self.definitions.team_weapon_passive_damage_multiplier = {
+
+ 
+self.values.grenade_crate.quantity = {1}
+
+----------------------------------------
+self.definitions.weapon_damage_multiplier = {
 		name_id = "menu_weapon_passive_damage_multiplier",
-		category = "team",
+		category = "feature",
 		upgrade = {
 			value = 1,
-			upgrade = "passive_damage_multiplier",
+			upgrade = "damage_multiplier",
 			category = "weapon"
 		}
 	}
-self.definitions.team_weapon_passive_damage_multiplier_1 = {
+self.definitions.player_armor_addend = {
+		name_id = "menu_player_armor_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "armor_addend",
+			category = "player"
+		}
+	}
+
+
+self.definitions.grenade_crate_quantity = {
+		name_id = "menu_grenade_crate_quantity",
+		category = "equipment_upgrade",
+		upgrade = {
+			value = 1,
+			upgrade = "quantity",
+			category = "grenade_crate"
+		}
+	}
+ 
+self.definitions.weapon_damage_addend_1 = {
 		name_id = "menu_weapon_passive_damage_multiplier",
-		category = "team",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "damage_addend",
+			category = "weapon"
+		}
+	}
+self.definitions.weapon_damage_addend_2 = {
+		name_id = "menu_weapon_passive_damage_multiplier",
+		category = "feature",
 		upgrade = {
 			value = 2,
-			upgrade = "passive_damage_multiplier",
+			upgrade = "damage_addend",
 			category = "weapon"
+		}
+	}	
+self.definitions.player_passive_health_addend = {
+		name_id = "menu_player_health_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "passive_health_addend",
+			category = "player"
+		}
+	} 
+self.definitions.player_passive_health_addend_1 = {
+		name_id = "menu_player_health_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "passive_health_addend",
+			category = "player"
+		}
+	} 
+self.definitions.player_overkill_health_to_damage_multiplier = {
+		name_id = "menu_player_overkill_health_to_damage_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "overkill_health_to_damage_multiplier",
+			category = "player"
+		}
+	}
+self.definitions.player_overkill_health_to_damage_multiplier_1 = {
+		name_id = "menu_player_overkill_health_to_damage_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "overkill_health_to_damage_multiplier",
+			category = "player"
+		}
+	}
+ 	
+
+	self.definitions.player_heisters_never_die_1 = {
+		name_id = "menu_heisters_never_die",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "heisters_never_die",
+			category = "player"
+		}
+	}
+self.definitions.player_critical_hit_chance_1 = {
+		incremental = true,
+		name_id = "menu_player_critical_hit_chance",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "critical_hit_chance",
+			category = "player"
+		}
+	}
+self.definitions.player_critical_hit_chance_2 = {
+		incremental = true,
+		name_id = "menu_player_critical_hit_chance",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "critical_hit_chance",
+			category = "player"
 		}
 	}
 self.definitions.player_level_5_armor_addend = {
@@ -169,17 +242,24 @@ self.definitions.player_level_7_armor_addend = {
 			category = "player"
 		}
 	}
-self.definitions.player_xp_multiplier_2 = {
-		name_id = "menu_player_xp_multiplier",
-		category = "feature",
+self.definitions.team_xp_multiplier = {
+		name_id = "menu_team_xp_multiplier",
+		category = "team",
 		upgrade = {
-			value = 2,
-			upgrade = "xp_multiplier",
-			category = "player"
+			value = 1,
+			upgrade = "multiplier",
+			category = "xp"
 		}
 	}
- 
-
+self.definitions.team_xp_multiplier_1 = {
+		name_id = "menu_team_xp_multiplier",
+		category = "team",
+		upgrade = {
+			value = 2,
+			upgrade = "multiplier",
+			category = "xp"
+		}
+	}
 	self.definitions.player_run_dmg_reduction = {
 		name_id = "menu_player_health_damage_reduction",
 		category = "feature",
@@ -217,25 +297,23 @@ self.definitions.carry_throw_distance_multiplier_2 = {
 			category = "carry"
 		}
 	}
-self.definitions.smg_fire_rate_multiplier_2 = {
-		name_id = "menu_smg_fire_rate_multiplier",
+ 
+ 
+
+
+
+self.definitions.weapon_consume_no_ammo_chance = {
+		name_id = "menu_shotgun_consume_no_ammo_chance",
 		category = "feature",
 		upgrade = {
-			value = 2,
-			upgrade = "fire_rate_multiplier",
-			category = "smg"
+			value = 1,
+			upgrade = "consume_no_ammo_chance",
+			category = "weapon"
 		}
 	}
-self.definitions.player_melee_damage_health_ratio_multiplier_2 = {
-		name_id = "menu_player_melee_damage_health_ratio_multiplier",
-		category = "feature",
-		upgrade = {
-			value = 2,
-			upgrade = "melee_damage_health_ratio_multiplier",
-			category = "player"
-		}
-	}
-self.definitions.saw_consume_no_ammo_chance_1 = {
+
+
+	self.definitions.saw_consume_no_ammo_chance_1 = {
 		name_id = "menu_shotgun_consume_no_ammo_chance",
 		category = "feature",
 		upgrade = {
@@ -253,8 +331,24 @@ self.definitions.saw_consume_no_ammo_chance_1 = {
 			category = "saw"
 		}
 	}
-
-
+self.definitions.smg_damage_addend = {
+		name_id = "menu_shotgun_damage_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 1,
+			upgrade = "damage_multiplier",
+			category = "smg"
+		}
+	}
+self.definitions.smg_damage_addend_1 = {
+		name_id = "menu_shotgun_damage_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "damage_multiplier",
+			category = "smg"
+		}
+	}
 self.definitions.smg_damage_multiplier_1 = {
 		name_id = "menu_shotgun_damage_multiplier",
 		category = "feature",
@@ -431,6 +525,15 @@ self.definitions.player_dodge_chance = {
 			category = "player"
 		}
 	}
+self.definitions.player_dodge_chance_1 = {
+		name_id = "menu_player_tier_dodge_chance",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "dodge_chance",
+			category = "player"
+		}
+	}
 self.definitions.shotgun_damage_addend_1 = {
 		name_id = "menu_shotgun_damage_multiplier",
 		category = "feature",
@@ -470,51 +573,7 @@ self.definitions.player_detection_risk_damage_multiplier_2 = {
 		}
 	}
 ------------------НОВОЕ ЗДОРОВЬЕ
-self.definitions.passive_health_addend_1 = {
-		name_id = "menu_player_health_multiplier",
-		category = "feature",
-		upgrade = {
-			value = 1,
-			upgrade = "passive_health_addend",
-			category = "player"
-		}
-	}
-	self.definitions.passive_health_addend_2 = {
-		name_id = "menu_player_health_multiplier",
-		category = "feature",
-		upgrade = {
-			value = 2,
-			upgrade = "passive_health_addend",
-			category = "player"
-		}
-	}
-	self.definitions.passive_health_addend_3 = {
-		name_id = "menu_player_health_multiplier",
-		category = "feature",
-		upgrade = {
-			value = 3,
-			upgrade = "passive_health_addend",
-			category = "player"
-		}
-	}
-	self.definitions.passive_health_addend_4 = {
-		name_id = "menu_player_health_multiplier",
-		category = "feature",
-		upgrade = {
-			value = 4,
-			upgrade = "passive_health_addend",
-			category = "player"
-		}
-	}
-    self.definitions.passive_health_addend_5 = {
-		name_id = "menu_player_health_multiplier",
-		category = "feature",
-		upgrade = {
-			value = 5,
-			upgrade = "passive_health_addend",
-			category = "player"
-		}
-	}
+ 
 -----------------------------НОВОЕ ЗДОРОВЬЕ	
 self.definitions.player_interacting_damage_multiplier_2 = {
 		name_id = "menu_player_interacting_damage_multiplier",
@@ -546,21 +605,21 @@ self.definitions.player_weapon_concealment_modifier = {
 			category = "player"
 		}
 	}
-self.definitions.weapon_silencer_damage_multiplier = {
+self.definitions.weapon_silencer_damage_addend = {
 		name_id = "menu_weapon_silencer_recoil_index_addend",
 		category = "feature",
 		upgrade = {
 			value = 1,
-			upgrade = "silencer_damage_multiplier",
+			upgrade = "silencer_damage_addend",
 			category = "weapon"
 		}
 	}
-self.definitions.weapon_silencer_damage_multiplier_2 = {
+self.definitions.weapon_silencer_damage_addend_2 = {
 		name_id = "menu_weapon_silencer_recoil_index_addend",
 		category = "feature",
 		upgrade = {
 			value = 2,
-			upgrade = "silencer_damage_multiplier",
+			upgrade = "silencer_damage_addend",
 			category = "weapon"
 		}
 	}
@@ -605,6 +664,15 @@ self.definitions.player_health_addend_2 = {
 			category = "player"
 		}
 	}
+self.definitions.player_health_addend_3 = {
+	    name_id = "menu_player_health_addend",
+		category = "feature",
+		upgrade = {
+			value = 3,
+			upgrade = "health_addend",
+			category = "player"
+		}
+	}
 self.definitions.weapon_passive_damage_multiplier = {
 		name_id = "menu_weapon_passive_damage_multiplier",
 		category = "feature",
@@ -622,24 +690,24 @@ self.definitions.weapon_passive_damage_multiplier_2 = {
 			upgrade = "passive_damage_multiplier",
 			category = "weapon"
 		}
-	}
-    self.definitions.akimbo_damage_multiplier_1 = {
+	} 
+ 
+
+    self.definitions.akimbo_damage_addend_1 = {
 		name_id = "menu_akimbo_damage_multiplier",
-		incremental = false,
 		category = "feature",
 		upgrade = {
 			value = 1,
-			upgrade = "damage_multiplier",
+			upgrade = "damage_addend",
 			category = "akimbo"
 		}
 	}
-	self.definitions.akimbo_damage_multiplier_2 = {
+	self.definitions.akimbo_damage_addend_2 = {
 		name_id = "menu_akimbo_damage_multiplier",
-		incremental = false,
 		category = "feature",
 		upgrade = {
 			value = 2,
-			upgrade = "damage_multiplier",
+			upgrade = "damage_addend",
 			category = "akimbo"
 		}
 	}
