@@ -55,6 +55,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "Skills_Buff", function(self)
 		"x_m45",
 		"x_mp7",
 		"x_ppk"
+		 
 	} 
  
 self.trees = {
@@ -161,10 +162,10 @@ self.trees = {
 				},
 				{
 					"iron_man",
-					"prison_wife"
+					"juggernaut"
 				},
 				{
-					"juggernaut"
+					"prison_wife"
 				}
 			}
 		},
@@ -389,7 +390,7 @@ self.trees = {
 			}
 		}
 	}
----------------------------------Навыки"weapon_passive_damage_multiplier_2"
+---------------------------------Навыки"weapon_passive_damage_multiplier_2"   ,
     self.skills.fire_control.icon_xy = {8,26}
     self.skills.fire_control[1].upgrades = {"team_weapon_damage_addend" }
 	self.skills.fire_control[2].upgrades = {"team_weapon_damage_addend_1"}
@@ -440,7 +441,7 @@ self.trees = {
 	self.skills.show_of_force[2].upgrades = {"player_interacting_damage_multiplier_2"}
 	---
 	self.skills.oppressor[2].upgrades = {"player_level_2_armor_addend","player_level_3_armor_addend","player_level_4_armor_addend","player_level_5_armor_addend","player_level_6_armor_addend","player_level_7_armor_addend" }
-	self.skills.oppressor[1].upgrades = { "player_flashbang_multiplier_1","player_flashbang_multiplier_2","player_armor_regen_time_mul_1"}
+	self.skills.oppressor[1].upgrades = {"player_health_damage_reduction_1","player_flashbang_multiplier_1","player_flashbang_multiplier_2","player_armor_regen_time_mul_1"}
 
     self.skills.bandoliers[1].upgrades = {"extra_ammo_multiplier1","passive_ammo_bag_interaction_speed_multiplier"}
     self.skills.pack_mule[2].upgrades = {"player_armor_carry_bonus_1","carry_throw_distance_multiplier_2","carry_movement_penalty_nullifier"}

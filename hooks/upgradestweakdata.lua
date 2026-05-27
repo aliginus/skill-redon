@@ -16,8 +16,8 @@ self.skill_descs.overkill.multibasic2 = "8"
 self.skill_descs.bandoliers.multibasic = "75%"
 
 self.skill_descs.optic_illusions.multibasic = "50%"
-self.skill_descs.inspire.multipro2 = "3"
-self.skill_descs.inspire.multipro = "75%"
+--self.skill_descs.inspire.multipro2 = "3"
+--self.skill_descs.inspire.multipro = "75%"
 self.skill_descs.shotgun_impact.multibasic2 = "+5" 
 self.skill_descs.shotgun_impact.multipro2 = "+10"
  
@@ -40,7 +40,7 @@ self.sharpshooter_categories = {"assault_rifle","smg","shotgun","pistol"}
  
 self.values.player.run_dmg_reduction = {0.3}
 self.values.team.player.run_dmg_reduction2 = {0.2}
-self.values.player.armor_addend = {2}
+ 
 self.values.player.level_5_armor_addend = {2}
 self.values.player.level_6_armor_addend = {2}
 self.values.player.level_7_armor_addend = {2}
@@ -49,7 +49,7 @@ self.values.player.dodge_chance = {0.08,0.15}
 self.values.first_aid_kit.downs_restore_chance = {0.1,0.35}
 self.values.carry.throw_distance_multiplier = {1.5,2}
 self.values.player.detection_risk_damage_multiplier = {{0.05,7,"above",35},{0.05,3,"above",35}}
-self.values.player.passive_health_addend = {4,6}
+ 
 self.values.player.detection_risk_fire_rate_multiplier = {{0.01,3,"below",35,0.1},{0.01,1,"below",35,0.1}}
 self.values.player.health_addend = {3}
 self.values.player.alarm_pager_speed_multiplier = {0.9,0.65}
@@ -59,8 +59,31 @@ self.values.player.melee_damage_health_ratio_multiplier = {0.99,1.19}
 self.values.player.weapon_concealment_modifier = {2}
 self.values.ammo_bag.interaction_speed_multiplier = {0.6}
 self.values.akimbo.damage_addend = {1.5,1.9} --15 19
+self.values.player.passive_armor_movement_penalty_multiplier = {0.75,0.3}
+self.values.team.weapon.damage_addend = {3.0,5.0}
+
+self.definitions.team_weapon_damage_addend = {
+		name_id = "menu_team_weapon_weapon_damage_addend",
+		category = "team",
+		upgrade = {
+			value = 1,
+			upgrade = "damage_addend",
+			category = "weapon"
+		}
+	}
+self.definitions.team_weapon_damage_addend_1 = {
+		name_id = "menu_team_weapon_weapon_damage_addend",
+		category = "team",
+		upgrade = {
+			value = 2,
+			upgrade = "damage_addend",
+			category = "weapon"
+		}
+	}
+ 
+
 ---Старые Навыки 
-self.values.cooldown.long_dis_revive = {{0.75,3}}
+--self.values.cooldown.long_dis_revive = {{0.75,3}}
 self.values.player.recharge_messiah = {math.huge}
 self.morale_boost_base_cooldown = 0
  
@@ -100,6 +123,15 @@ self.values.weapon.armor_piercing_chance_2 = {1}
 self.values.grenade_crate.quantity = {1}
 
 ----------------------------------------
+self.definitions.player_passive_armor_movement_penalty_multiplier_2 = {
+		name_id = "menu_passive_armor_movement_penalty_multiplier",
+		category = "feature",
+		upgrade = {
+			value = 2,
+			upgrade = "passive_armor_movement_penalty_multiplier",
+			category = "player"
+		}
+	}
 self.definitions.weapon_damage_multiplier = {
 		name_id = "menu_weapon_passive_damage_multiplier",
 		category = "feature",
