@@ -390,7 +390,12 @@ self.trees = {
 		}
 	}
 ---------------------------------Навыки"weapon_passive_damage_multiplier_2"
-    self.skills.jail_workout.icon_xy = {4,8}
+    self.skills.fire_control.icon_xy = {8,26}
+    self.skills.fire_control[1].upgrades = {"team_weapon_damage_addend" }
+	self.skills.fire_control[2].upgrades = {"team_weapon_damage_addend_1"}
+    self.skills.juggernaut[1].upgrades = {"player_armor_multiplier","player_health_damage_reduction_2"}
+    self.skills.awareness[2].upgrades = { "player_can_free_run","player_run_and_reload","player_passive_armor_movement_penalty_multiplier_2"}
+	self.skills.jail_workout.icon_xy = {4,8}
     self.skills.unseen_strike[1].upgrades = {"weapon_fire_rate_multiplier"}
 	self.skills.unseen_strike[2].upgrades = {"weapon_damage_multiplier"}
     self.skills.shotgun_impact[1].upgrades = {"shotgun_recoil_index_addend","shotgun_damage_addend_1"}
