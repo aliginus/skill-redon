@@ -84,6 +84,7 @@ function BlackMarketManager:damage_addend(name, categories, silencer, detection_
 	value = value + managers.player:upgrade_value("player", "damage_addend", 0)
 	value = value + managers.player:upgrade_value("weapon", "damage_addend", 0)
 	value = value + managers.player:upgrade_value(name, "damage_addend", 0)
+	value = value + managers.player:team_upgrade_value("weapon","damage_addend", 0)
    
 	for _, category in ipairs(categories) do
 		value = value + managers.player:upgrade_value(category, "damage_addend", 0)
