@@ -25,7 +25,7 @@ function BlackMarketManager:damage_multiplier(name, categories, silencer, detect
 	if self:ignore_damage_upgrades(name, blueprint) then
 		return multiplier
 	end
-
+     
 	for _, category in ipairs(categories) do
 		multiplier = multiplier + 1 - managers.player:upgrade_value(category, "damage_multiplier", 1)
 	end
@@ -56,6 +56,7 @@ function BlackMarketManager:damage_multiplier(name, categories, silencer, detect
   
 	multiplier = multiplier + 1 - managers.player:get_property("trigger_happy", 1)
     
+	
    
 	
 	return self:_convert_add_to_mul(multiplier)

@@ -141,3 +141,18 @@ function PlayerManager:damage_reduction_skill_multiplier(damage_type,running,mov
 	return multiplier
 end
  
+
+function PlayerManager:body_armor_skill_addend(override_armor)
+	local addend = 0
+	addend = addend + self:upgrade_value("player", tostring(override_armor or managers.blackmarket:equipped_armor(true, true)) .. "_armor_addend", 0)
+
+	if self:has_category_upgrade("player", "armor_increase") then
+		local health_multiplier = self:health_skill_multiplier()
+		local max_health = (PlayerDamage._HEALTH_INIT + self:health_skill_addend()) * health_multiplier
+		addend = addend + max_health * self:upgrade_value("player", "armor_increase", 1)
+	end
+
+	addend = addend + self:upgrade_value("team", "crew_add_armor", 0)
+    addend = addend + self:upgrade_value("player","armor_addend",0) 
+	return addend
+end

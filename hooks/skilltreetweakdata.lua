@@ -206,10 +206,10 @@ self.trees = {
 				},
 				{
 					"engineering",
-					"jack_of_all_trades"
+					"tower_defense"
 				},
 				{
-					"tower_defense"
+					"jack_of_all_trades"
 				}
 			}
 		},
@@ -315,7 +315,7 @@ self.trees = {
 					"silence_expert"
 				},
 				{
-					"backstab",
+					"crit",
 					"hitman"
 				},
 				{
@@ -390,12 +390,34 @@ self.trees = {
 			}
 		}
 	}
----------------------------------Навыки"weapon_passive_damage_multiplier_2"   ,
+---------------------------------Навыки "weapon_passive_damage_multiplier_2"   ,
+    self.skills.single_shot_ammo_return[1].upgrades = {"snp_damage_addend"}
+
+    self.skills.running_from_death[1].upgrades = {"player_overkill_health_to_damage_multiplier"}
+	self.skills.running_from_death[2].upgrades = {"player_overkill_health_to_damage_multiplier_1"}
+    self.skills.sentry_targeting_package.icon_xy = {7,0}
+    self.skills.sentry_targeting_package[1].upgrades = {"minigun_consume_no_ammo_chance_2","lmg_consume_no_ammo_chance"}
+	self.skills.sentry_targeting_package[2].upgrades = {"minigun_damage_addend","lmg_damage_addend"}
+    self.skills.engineering[1].upgrades = {"flamethrower_consume_no_ammo_chance"}
+	self.skills.engineering[2].upgrades = {"flamethrower_reload_speed_multiplier"}   
+    self.skills.engineering.icon_xy = {7,12}
+
+    self.skills.defense_up[1].upgrades = {"player_xp_multiplier"}
+    self.skills.defense_up[2].upgrades = {"player_xp_multiplier_1"}
+	self.skills.defense_up.icon_xy = {7,8}
+    self.skills.eco_sentry.icon_xy = {3,3}
+    self.skills.eco_sentry[1].upgrades = {"smg_fire_rate_multiplier"}
+	self.skills.eco_sentry[2].upgrades = {"smg_damage_addend","smg_consume_no_ammo_chance" }
+    self.skills.tower_defense.icon_xy = {1,28}
+    self.skills.tower_defense[1].upgrades = {"grenade_launcher_reload_speed_multiplier","grenade_launcher_extra_ammo_multiplier"}
+	self.skills.tower_defense[2].upgrades = {"grenade_launcher_consume_no_ammo_chance_2"}
     self.skills.fire_control.icon_xy = {8,26}
     self.skills.fire_control[1].upgrades = {"team_weapon_damage_addend" }
 	self.skills.fire_control[2].upgrades = {"team_weapon_damage_addend_1"}
     self.skills.juggernaut[1].upgrades = {"player_armor_multiplier","player_health_damage_reduction_2"}
-    self.skills.awareness[2].upgrades = { "player_can_free_run","player_run_and_reload","player_passive_armor_movement_penalty_multiplier_2"}
+	 
+    self.skills.awareness[1].upgrades = {"player_movement_speed_multiplier","player_climb_speed_multiplier_2"}
+	self.skills.awareness[2].upgrades = { "player_can_free_run","player_run_and_reload","player_passive_armor_movement_penalty_multiplier_2"}
 	self.skills.jail_workout.icon_xy = {4,8}
     self.skills.unseen_strike[1].upgrades = {"weapon_fire_rate_multiplier"}
 	self.skills.unseen_strike[2].upgrades = {"weapon_damage_multiplier"}
@@ -406,10 +428,10 @@ self.trees = {
     self.skills.frenzy[1].upgrades = {"weapon_damage_addend_1" }
 	self.skills.frenzy[2].upgrades = {"weapon_damage_addend_2" }
 	
-	self.skills.inspire[2].upgrades = {"cooldown_long_dis_revive","player_heisters_never_die_1"}
+	 
 	self.skills.steady_grip[1].upgrades = {"player_stability_increase_bonus_1"}
 	self.skills.stable_shot[1].upgrades = { "player_weapon_accuracy_increase_1"}	
-	
+	 
 	self.skills.sprinter[2].upgrades = {"player_run_dodge_chance"}
     self.skills.scavenger[1].upgrades = {"temporary_damage_speed_multiplier","player_run_dmg_reduction"}
 	self.skills.scavenger[2].upgrades = {"team_player_run_dmg_reduction_1","player_team_damage_speed_multiplier_send"}
@@ -419,14 +441,42 @@ self.trees = {
     self.skills.jail_diet[1].upgrades = {"player_dodge_chance"}
     self.skills.jail_diet[2].upgrades = {"player_dodge_chance_1"}
     self.skills.hitman.icon_xy = {5,9}
-	self.skills.hitman[1].upgrades = {"weapon_silencer_damage_addend","player_marked_enemy_extra_damage"} 
-    self.skills.hitman[2].upgrades = {"weapon_silencer_damage_addend_2","player_marked_inc_dmg_distance_1","weapon_steelsight_highlight_specials","player_mark_enemy_time_multiplier"} 
+	self.skills.hitman[1].upgrades = {"weapon_silencer_damage_addend"} 
+    self.skills.hitman[2].upgrades = {"weapon_silencer_damage_addend_2"} 
 	self.skills.medic_2x[1].upgrades = {"doctor_bag_amount_increase1"}
 	self.skills.medic_2x[2].upgrades = {"doctor_bag_quantity"}
-    self.skills.backstab[1].upgrades = {"player_critical_hit_chance_1"}
-	self.skills.backstab[2].upgrades = {"player_critical_hit_chance_2","player_unseen_increased_crit_chance_1","player_unseen_temp_increased_crit_chance_1"} 
+    --[[
+	self.skills.backstab[1].upgrades = {"player_critical_hit_chance_1"}
+	self.skills.backstab[2].upgrades = {"player_critical_hit_chance_2",} 
+	self.skills.backstab.desc_id = "menu_crit_beta_desc"
+	self.skills.backstab.name_id = "menu_crit_beta"
+	]]--
+	self.skills.crit = {
+		{
+			upgrades = {
+				"player_critical_hit_chance_1"
+			},
+			cost = self.costs.hightier
+		},
+		{
+			upgrades = {
+				"player_critical_hit_chance_2",
+				"player_unseen_increased_crit_chance_1",
+				"player_unseen_temp_increased_crit_chance_1"
+			},
+			cost = self.costs.hightierpro
+		},
+		name_id = "menu_crit_beta",
+		desc_id = "menu_crit_beta_desc",
+		icon_xy = {
+			0,
+			12
+		}
+	}
+	
+	
 	self.skills.ammo_2x[1].upgrades = {"ammo_bag_ammo_increase1"}
-	self.skills.ammo_2x[2].upgrades = {"ammo_bag_quantity","grenade_crate_quantity"}
+	self.skills.ammo_2x[2].upgrades = {"ammo_bag_quantity" }
 
 	self.skills.akimbo[1].upgrades = {"akimbo_damage_addend_1"}
     self.skills.akimbo[2].upgrades = {"akimbo_extra_ammo_multiplier_1","akimbo_damage_addend_2"}
@@ -439,8 +489,8 @@ self.trees = {
 	self.skills.fast_fire[2].upgrades = {"player_ap_bullets_1","weapon_silencer_armor_piercing_chance_2","sentry_gun_armor_piercing_chance_2","saw_armor_piercing_chance"}
 
 	self.skills.show_of_force[2].upgrades = {"player_interacting_damage_multiplier_2"}
-	---
-	self.skills.oppressor[2].upgrades = {"player_level_2_armor_addend","player_level_3_armor_addend","player_level_4_armor_addend","player_level_5_armor_addend","player_level_6_armor_addend","player_level_7_armor_addend" }
+	---      "player_level_2_armor_addend","player_level_3_armor_addend","player_level_4_armor_addend","player_level_5_armor_addend","player_level_6_armor_addend","player_level_7_armor_addend"
+	self.skills.oppressor[2].upgrades = {"player_armor_addend" }
 	self.skills.oppressor[1].upgrades = {"player_health_damage_reduction_1","player_flashbang_multiplier_1","player_flashbang_multiplier_2","player_armor_regen_time_mul_1"}
 
     self.skills.bandoliers[1].upgrades = {"extra_ammo_multiplier1","passive_ammo_bag_interaction_speed_multiplier"}
@@ -455,7 +505,7 @@ self.trees = {
      
     self.specializations[4][3].upgrades = {"player_crouch_dodge_chance_1"}
     self.specializations[5][3].upgrades = {"player_perk_armor_regen_timer_multiplier_2","akimbo_extra_ammo_multiplier_2"}
-     
+ 
 ---
 
 

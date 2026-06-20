@@ -9,9 +9,9 @@
     <hook file="interactiontweakdata.lua" source_file="lib/tweak_data/interactiontweakdata"/>
     <hook file="playertweakdata.lua" source_file="lib/tweak_data/playertweakdata"/>
     <hook file="raycastweaponbase.lua" source_file="lib/units/weapons/raycastweaponbase"/>
-    <hook file="playerstandard.lua"    source_file="lib/units/beings/player/states/playerstandard"/>
+    <hook file="ecmjammerbase.lua"  source_file="lib/units/equipment/ecm_jammer/ecmjammerbase"/>
     <hook file="skilltreemanager.lua" source_file="lib/managers/skilltreemanager"/>
-    <hook file="equipmentstweakdata.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
+     
    </Hooks>
 
     <AddFiles directory="assets/">
